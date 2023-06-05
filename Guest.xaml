@@ -1,0 +1,42 @@
+﻿<Page x:Class="DemoD.Guest"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DemoD"
+      mc:Ignorable="d"
+      FontSize="32"
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="Guest">
+
+    <Grid Background="White">
+        <ListView ItemsSource="{Binding Products}" Margin="0,0,0,129">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <TextBlock>
+                            <Run Text="Название: "></Run>
+                            <Run Text="{Binding Name}"></Run>
+                            <LineBreak></LineBreak>
+                             <Run Text="Описание: "></Run>
+                            <Run Text="{Binding Description}"></Run>
+                            <LineBreak></LineBreak>
+                             <Run Text="Производитель: "></Run>
+                            <Run Text="{Binding Manufacturer}"></Run>
+                            <LineBreak></LineBreak>
+                             <Run Text="Цена: "></Run>
+                            <Run Text="{Binding Cost}"></Run>
+                            <LineBreak></LineBreak>
+                             <Run Text="Размер скидки: "></Run>
+                            <Run Text="{Binding CountDiscount}"></Run>
+                            <LineBreak></LineBreak>
+
+                        </TextBlock>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Content="Button" HorizontalAlignment="Center" Margin="0,980,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+
+    </Grid>
+</Page>
